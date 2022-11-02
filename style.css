@@ -1,3 +1,7 @@
+body {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
 .header {
   display: flex;
   flex-direction: row;
@@ -18,10 +22,6 @@
 
 .menu.active {
   display: flex;
-}
-
-.menu.hide {
-  display: none;
 }
 
 .menu_mobile {
@@ -79,4 +79,90 @@
 .cart_avatar:hover {
   border: 2px solid hsl(26, 100%, 55%);
   border-radius: 50%;
+}
+
+/* .image_slider {
+  display: flex;
+  flex-direction: row;
+} */
+
+.product {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.arrow_btn {
+  position: absolute;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.left {
+  float: left;
+  right: 80%;
+  top: 35%;
+}
+
+.right {
+  float: right;
+  left: 80%;
+  top: 35%;
+}
+
+.product_content {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 15px;
+}
+
+.product_company {
+  color: hsl(26, 100%, 55%);
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.product_name {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.product_description {
+  color: hsl(219, 9%, 45%);
+  font-size: 15px;
+}
+
+.price_section {
+  display: flex;
+  align-items: center;
+}
+
+.price {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.discount {
+  color: hsl(26, 100%, 55%);
+  font-weight: 700;
+  background-color: hsl(25, 100%, 94%);
+  padding: 5px;
+  border-radius: 15%;
+}
+
+.old_price {
+  color: hsl(219, 9%, 45%);
+  font-weight: 700;
+  bottom: 1px solid hsl (219, 9%, 45%);
 }
