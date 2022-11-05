@@ -16,6 +16,10 @@
       href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="node_modules/lightbox2/dist/css/lightbox.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <main>
@@ -93,7 +97,12 @@
       <!-- text section -->
       <div class="main_section">
         <div class="main_gallery">
-          <img src="./images/image-product-1.jpg" alt="" class="main_img" />
+          <a
+            href="./images/image-product-1.jpg"
+            data-lightbox="image-1"
+            data-title="My caption"
+            ><img src="./images/image-product-1.jpg" alt="" class="main_img"
+          /></a>
         </div>
         <div class="product_content">
           <h3 class="product_company">Sneaker Company</h3>
@@ -130,5 +139,6 @@
       </footer> -->
     </main>
     <script src="script.js"></script>
+    <script src="node_modules/lightbox2/dist/js/lightbox-plus-jquery.js"></script>
   </body>
 </html>
