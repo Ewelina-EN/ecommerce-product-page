@@ -1,5 +1,5 @@
 body {
-  font-family: "Kumbh Sans", sans-serif;
+  font-family: 'Kumbh Sans', sans-serif;
   max-width: 1024px;
   margin: 0 auto;
 }
@@ -79,20 +79,88 @@ body {
 .main_section {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  margin: 0 25px;
+}
+
+.main_gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
 .main_img {
-  width: 500px;
-  border-radius: 25px;
-  margin: 0 35px;
+  width: 400px;
+  border-radius: 15px;
+  margin: 0 0 20px 0;
+  cursor: pointer;
+  object-fit: cover;
 }
+
+.main_thumbnail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  margin: 0 45px 0 45px;
+}
+
+.thumbnail {
+  object-fit: cover;
+  max-width: 140px;
+  max-height: 80px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 2px solid transparent;
+}
+
+.thumbnail:hover {
+  opacity: 0.5;
+}
+
+.active {
+  opacity: 0.4;
+  border: 2px solid hsl(26, 100%, 50%, 0.9);
+}
+
+/* .product_img_gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* .arrow_btn {
+  position: absolute;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+} */
+
+/* .left {
+  position: relative;
+  right: -20px;
+}
+
+.right {
+  position: relative;
+  left: -20px;
+} */
 
 .product_content {
   display: flex;
   flex-direction: column;
-  margin: 20px;
+  margin: 50px 30px;
   width: 400px;
 }
 
@@ -147,19 +215,47 @@ body {
   text-decoration: line-through;
 }
 
-.amount {
+.quantity {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin: 15px 0;
-  font-weight: 700;
-  padding: 10px 15px;
+  margin-top: 30px;
 }
 
-.sign {
+.quantity_update {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #efefef;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.quantity_update_btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   color: hsl(26, 100%, 55%);
   font-size: 30px;
+  background-color: #efefef;
+  border-radius: 10px;
+  border: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+.quantity_update_input {
+  width: 60px;
+  border: none;
+  text-align: center;
+  background-color: #efefef;
+  font-weight: 700;
+  font-size: 17px;
 }
 
 .add_btn {
@@ -175,8 +271,8 @@ body {
   font-size: 14px;
   letter-spacing: 1px;
   box-shadow: 0px 10px 60px 0px hsl(26, 100%, 55%, 0.4);
-  width: 250px;
-  height: 50px;
+  padding: 15px;
+  width: 240px;
 }
 
 .add_btn img {
@@ -209,6 +305,9 @@ body {
     top: 0;
     height: 100%;
     width: 100%;
+    /* a hack: opacity creates new stacking context https://www.w3.org/TR/css-color-3/#transparency */
+    opacity: 100;
+    z-index: 1;
   }
 
   .menu.active {
@@ -272,6 +371,10 @@ body {
     display: flex;
   }
 
+  .main_section {
+    margin: 0;
+  }
+
   .main_gallery {
     display: none;
   }
@@ -309,6 +412,11 @@ body {
     top: 35%;
   }
 
+  .active {
+    opacity: 100;
+    border: none;
+  }
+
   .price_section {
     display: flex;
     align-items: center;
@@ -324,38 +432,32 @@ body {
     color: hsl(219, 9%, 45%, 0.5);
     font-weight: 700;
     bottom: 1px solid hsl (219, 9%, 45%);
-    margin-left: 100px;
+    margin-left: 85px;
     text-decoration: line-through;
   }
 
-  .amount {
-    background-color: hsl(219, 9%, 45%, 0.1);
+  .quantity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border-radius: 10px;
+    width: 100%;
+    margin: 0;
+  }
+
+  .quantity_update {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #efefef;
+    border-radius: 10px;
+    padding: 15px;
+    width: 90%;
+    margin: 15px 0;
   }
 
   .add_btn {
-    display: none;
-  }
-
-  .add_btn_mobile {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 18px;
-    font-weight: 700;
-    border-radius: 10px;
-    border: none;
-    background-color: hsl(26, 100%, 55%);
-    color: white;
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 1px;
-    box-shadow: 0px 10px 60px 0px hsl(26, 100%, 55%, 0.4);
-  }
-
-  .add_btn_mobile img {
-    margin-right: 15px;
-    color: white;
+    width: 100%;
   }
 }

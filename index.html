@@ -93,16 +93,45 @@
           </button>
         </div>
       </div>
-
-      <!-- text section -->
       <div class="main_section">
         <div class="main_gallery">
           <a
             href="./images/image-product-1.jpg"
             data-lightbox="image-1"
-            data-title="My caption"
-            ><img src="./images/image-product-1.jpg" alt="" class="main_img"
-          /></a>
+            data-title=""
+          >
+            <img
+              src="./images/image-product-1.jpg"
+              alt=""
+              id="featured"
+              class="main_img"
+            />
+          </a>
+          <div class="main_thumbnail">
+            <img
+              src="./images/image-product-1.jpg"
+              alt=""
+              class="thumbnail active"
+            />
+            <a
+              href="./images/image-product-2.jpg"
+              data-lightbox="image-1"
+              data-title=""
+              ><img src="./images/image-product-2.jpg" alt="" class="thumbnail"
+            /></a>
+            <a
+              href="./images/image-product-3.jpg"
+              data-lightbox="image-1"
+              data-title=""
+              ><img src="./images/image-product-3.jpg" alt="" class="thumbnail"
+            /></a>
+            <a
+              href="./images/image-product-4.jpg"
+              data-lightbox="image-1"
+              data-title=""
+              ><img src="./images/image-product-4.jpg" alt="" class="thumbnail"
+            /></a>
+          </div>
         </div>
         <div class="product_content">
           <h3 class="product_company">Sneaker Company</h3>
@@ -118,19 +147,19 @@
             <div class="old_price_mobile">$250.00</div>
           </div>
           <div class="old_price">$250.00</div>
-          <div class="amount">
-            <div class="sign">-</div>
-            <div>0</div>
-            <div class="sign">+</div>
+
+
+          <form class="quantity">
+            <div class="quantity_update">
+            <button class="quantity_update_btn"><img src="./images/icon-minus.svg"></button>
+            <input type="number" value="0" class="quantity_update_input"></input>
+            <button class="quantity_update_btn"><img src="./images/icon-plus.svg"></button>
+            </div>
+           
             <button class="add_btn">
               <img src="./images/icon-cart-button.svg" />Add to cart
             </button>
-          </div>
-          <button class="add_btn_mobile">
-            <img src="./images/icon-cart-button.svg" />Add to cart
-          </button>
-        </div>
-      </div>
+          </form>
       <!-- <footer class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
